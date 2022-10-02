@@ -1,10 +1,7 @@
 {
   description = "ROS shim overlay for the Nix package manager";
 
-  inputs = {
-    nixpkgs.url = "github:lopsided98/nixpkgs/nix-ros";
-    flake-utils.url = "github:numtide/flake-utils";
-  };
+  inputs = { flake-utils.url = "github:numtide/flake-utils"; };
 
   outputs = { self, nixpkgs, flake-utils }:
     with nixpkgs.lib;
