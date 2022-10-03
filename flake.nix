@@ -12,7 +12,7 @@
           inherit system;
           overlays = [ self.overlays.default ];
         };
-      in { legacyPackages = [ pkgs.python3Packages.ifcfg ]; }) // {
+      in { legacyPackages = pkgs.pythonPackages; }) // {
         overlays.default = import ./default.nix;
 
       };
