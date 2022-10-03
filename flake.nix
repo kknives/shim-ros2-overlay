@@ -10,7 +10,7 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ self.overlays.default ];
+          overlays = [ self.overlays.default { inherit system; } ];
         };
       in { legacyPackages = pkgs.pythonPackages; }) // {
         overlays.default = import ./default.nix;
