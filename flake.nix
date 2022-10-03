@@ -15,11 +15,5 @@
       in { legacyPackages = pkgs.rosPackages; }) // {
         overlays.default = import ./default.nix;
 
-        overlay = nixpkgs.lib.warn
-          "'nix-ros-overlay.overlay' is deprecated, use 'nix-ros-overlay.overlays.default' instead"
-          self.overlays.default;
-        nixosModule = nixpkgs.lib.warn
-          "'nix-ros-overlay.nixosModule' is deprecated, use 'nix-ros-overlay.nixosModules.default' instead"
-          self.nixosModules.default;
       };
 }
